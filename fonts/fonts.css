@@ -1,0 +1,72 @@
+@font-face {
+    font-family: AmaranthBold;
+    src: url(./Amaranth-Bold.ttf);
+}
+@font-face {
+    font-family: AmaranthRegular;
+    src: url(./Amaranth-Regular.ttf);
+}
+@font-face {
+    font-family: amster;
+    src: url(./Amsterdam.ttf);
+}
+@font-face {
+    font-family: Antic;
+    src: url(./Antic-Regular.ttf);
+}
+@font-face {
+    font-family: Bright;
+    src: url(./Bright\ Sunshine.ttf);
+}
+@font-face {
+    font-family: Bright2;
+    src: url(./Bright.ttf);
+}
+@font-face {
+    font-family: Brittant;
+    src: url(./Brittany.ttf);
+}
+@font-face {
+    font-family: FiraCode;
+    src: url(./FiraCode.ttf);
+}
+@font-face {
+    font-family: Julius;
+    src: url(./JuliusSansOne-Regular.ttf);
+}
+@font-face {
+    font-family: livicRegular;
+    src: url(./Livvic-Medium.ttf);
+}
+@font-face {
+    font-family: livicBold;
+    src: url(./Livvic-Bold.ttf);
+}
+@font-face {
+    font-family: livicItalic;
+    src: url(./Livvic-Italic.ttf);
+}
+@font-face {
+    font-family: livicsemibold;
+    src: url(./Livvic-SemiBold.ttf);
+}
+@font-face {
+    font-family: livicMediumItalic;
+    src: url(./Livvic-MediumItalic.ttf);
+}
+@font-face {
+    font-family: redhat;
+    src: url(./RedHatDisplay.ttf);
+}
+@font-face {
+    font-family: redhatItalic;
+    src: url(./RedHatDisplay-Italic.ttf);
+}
+@font-face {
+    font-family: textone;
+    src: url(./TextMeOne-Regular.ttf);
+}
+@font-face {
+    font-family: taken;
+    src: url(./Taken\ by\ Vultures\ Demo.otf);
+}

@@ -1,0 +1,248 @@
+html,
+body {
+    overflow-x: hidden;
+}
+#logo {
+    font-family: taken;
+}
+#navlinks {
+    font-family: livicRegular;
+}
+#homeHelo {
+    font-family: Brittant;
+}
+#im {
+    font-family: "Times New Roman", Times, serif;
+}
+#ayush {
+    font-family: Bright2;
+}
+#homebody {
+    font-family: FiraCode;
+}
+body {
+    font-family: livicRegular;
+}
+.ease {
+    transition: all 0.3s ease-in;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    margin-top: 0%;
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px) saturate(70%);
+    background-color: rgba(255, 255, 255, 0.684);
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    /* transform: scale(0.95); */
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+a {
+    transition: 0.5s;
+}
+a:hover {
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 2px rgb(0, 0, 0);
+    transition: 0.4s;
+    /* cursor: url('./img/cursor/hand-pointer-regular.svg') 16 16, auto; */
+    /* cursor: url('./img/cursor/cursors.svg')16 16, auto; */
+}
+
+#navlinksMobile a:hover {
+    color: rgb(122, 122, 122);
+    transition: 0.5s;
+}
+#abtHead {
+    font-family: Antic;
+    font-size: larger;
+}
+#abtPara {
+    font-family: textone;
+}
+#abtSub {
+    font-family: redhat;
+}
+
+#explore {
+    display: inline-block;
+    position: relative;
+}
+
+#arrow {
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+#explore:hover #arrow {
+    transform: translateX(
+        5px
+    ); /* Adjust the value as needed for the desired translation */
+}
+#imgGal {
+    width: 100%;
+    height: 100%;
+}
+#imgContainer {
+    margin: 2px;
+}
+#btn {
+    transition: 0.3s;
+}
+#btn:hover {
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    color: black;
+}
+#btn:active {
+    transition: 0.3s;
+    transform: scale(0.85);
+}
+#socialIcon {
+    transition: 0.5s;
+}
+#socialIcon:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+#footerHead {
+    font-family: AmaranthRegular;
+}
+#footerPara {
+    font-family: Antic;
+}
+.card {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    overflow: hidden;
+    position: relative;
+    color: #fcfcfc;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+    filter: none;
+    transition: 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.4; /* Adjust the overlay opacity as needed */
+    z-index: -1;
+}
+.card:hover img {
+    filter: blur(25px);
+}
+.card a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card a {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+    }
+}
+
+.activeUser {
+    transform: scale(100%);
+    border: 1px solid black;
+    filter: none;
+    padding: 10px;
+    box-shadow: 0 50px 40px -15px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+#moveToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#arrowToTop {
+    transition: 0.3s;
+}
+#arrowToTop:active {
+    transform: scale(0.85);
+    transition: 0.3s;
+}
+
+#arrowToTop {
+    transition: 0.5s;
+}
+#arrowToTop:hover {
+    transform: translateY(-5px);
+    transition: 1s;
+}
+
+#iconSwitcher2,
+#iconSwitcher {
+    transition: 0.6s;
+}
+#iconSwitcher2:hover,
+#iconSwitcher:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+#iconSwitcher2:active,
+#iconSwitcher:active {
+    transform: rotate(-60deg);
+    /* transform: scale(1.2); */
+    transition: 0.4s;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark .overlay {
+        background-color: #151515a4;
+        color: #dfe0e1;
+    }
+    .dark .card a {
+        color: #dfe0e1;
+    }
+    .dark a:hover {
+        box-shadow: 0px 2px #dfe0e1;
+        color: #dfe0e1;
+    }
+    .dark .sticky {
+        background-color: #151515a4;
+        color: #dfe0e1;
+    }
+
+    .dark .activeUser {
+        border: 1px solid rgba(223, 224, 225, 1);
+        box-shadow: 0 50px 90px -15px rgba(223, 224, 225, 0.2);
+    }
+    .dark #btn:hover {
+        background-color: #151515a4;
+        border: 2px solid rgba(223, 224, 225, 1);
+        color: rgba(223, 224, 225, 1);
+    }
+}
