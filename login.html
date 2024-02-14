@@ -42,8 +42,16 @@
             data-aos="fade"
             data-aos-duration="2000"
         >
-            <div id="hamburger" class="text-center scale-150 md:hidden py-10">
-                <i id="burgerIcon" class="fa-solid fa-bars"></i>
+            <div
+                id="hamburger"
+                class="flex justify-between items-center mx-5 md:hidden py-10"
+                style="margin-left: 50px; margin-right: 50px"
+            >
+                <span id="logo" class="text-2xl">Ayush</span>
+                <i
+                    id="burgerIcon"
+                    class="fa-solid fa-bars cursor-pointer hover:-rotate-45 duration-300 active:scale-95"
+                ></i>
             </div>
 
             <div
@@ -143,7 +151,8 @@
         <div id="loginFooter">
             <div class="absolute inset-x-0 bottom-0 p-10 text-center">
                 <p class="dark:text-darkWhite text-black">
-                    Made with ❤️ by AYUSH
+                    Crafted with <i class="fa-regular fa-heart fa-solid"></i> by
+                    Ayush
                 </p>
             </div>
         </div>
@@ -159,5 +168,88 @@
         </script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="script.js"></script>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+            import {
+                getAuth,
+                signInWithEmailAndPassword,
+            } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+            import {
+                getFirestore,
+                doc,
+                collection,
+                addDoc,
+                getDocs,
+            } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyAofgOPFov1tFZx2mu0-as6Uj7PyXHTAT0",
+                authDomain: "portfolio-1b0ca.firebaseapp.com",
+                databaseURL:
+                    "https://portfolio-1b0ca-default-rtdb.firebaseio.com",
+                projectId: "portfolio-1b0ca",
+                storageBucket: "portfolio-1b0ca.appspot.com",
+                messagingSenderId: "239399104832",
+                appId: "1:239399104832:web:4ccbe1cbb6dd5db6940aa5",
+                measurementId: "G-B82K68DR7E",
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            const db = getFirestore(app);
+
+            const btn = document.getElementById("btn");
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                function toast(text) {
+                    Toastify({
+                        text: text,
+                        className: "info",
+                        style: {
+                            background:
+                                "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
+                            fontFamily: "Antic",
+                        },
+                    }).showToast();
+                }
+
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.match(emailRegex)) {
+                    toast("Please enter a valid email address");
+                    return;
+                }
+
+                if (password.trim() === "") {
+                    toast("Please enter a valid purpose");
+                    return;
+                }
+
+                signInWithEmailAndPassword(auth, email, password)
+                    .then(() => {
+                        toast("login successfull!");
+                        const ref = collection(db, "Connect");
+                        let responses = [];
+                        getDocs(ref)
+                            .then((querySnapshot) => {
+                                querySnapshot.forEach((doc) => {
+                                    responses.push(doc.data());
+                                    console.log(doc.data());
+                                });
+                            })
+                            .catch((err) => {
+                                console.error(err);
+                            });
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                        toast(
+                            "Error signing in. Please check your credentials and try again."
+                        );
+                    });
+            });
+        </script>
     </body>
 </html>
