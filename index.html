@@ -451,15 +451,56 @@
         const db = getFirestore(app);
         const btn = document.getElementById("submitForm");
         btn.addEventListener("click",(e)=>{
-            
+        function toast(text){
+            Toastify({
+                    text: text,
+                    className: "info",
+                    style: {
+                        background:
+                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
+                        fontFamily: "Antic",
+                    },
+                }).showToast();
+        }    
             let name = document.getElementById("naam").value;
             let email = document.getElementById("email").value;
             let phone = document.getElementById("phone").value;
             let purpose = document.getElementById("purpose").value;
             let query = document.getElementById("details").value;
     
-            if(name!=="" || email !=="" || phone !=="" || purpose!=="" || query!==""){
-                const userRef = collection(db, "Connect");
+
+            const nameRegex = /^[A-Za-z ]+$/;
+            if (!name.match(nameRegex)) {
+                toast("Name should not contain numbers or special characters");
+                return;
+            }
+
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailRegex)) {
+                toast("Please enter a valid email address")
+                return;
+            }
+
+            
+            if (!/^\d+$/.test(phone)) {
+                toast("Please enter a valid phone number")
+                return;
+            }
+
+            
+            if (purpose.trim() === "") {
+                toast("Please enter a valid purpose");
+                return;
+            }
+
+            
+            if (query.trim() === "") {
+                toast("Please provide details for your query");
+                return;
+            }
+
+            const userRef = collection(db, "Connect");
                 addDoc(userRef, {
                     name: name,
                     email: email,
@@ -468,39 +509,13 @@
                     query: query,
                 })
                 .then(() => {
-                    Toastify({
-                    text: "We will get in touch asap!!",
-                    className: "info",
-                    style: {
-                        background:
-                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
-                        fontFamily: "Antic",
-                    },
-                }).showToast();
+                    toast("We will get in touch asap!!")
                 })
                 .catch((error) => {
                     console.error("Error writing document: ", error);
-                    Toastify({
-                    text: "Some problems our side!! try again later",
-                    className: "error",
-                    style: {
-                        background:
-                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
-                        fontFamily: "Antic",
-                    },
-                }).showToast();
+                    toast("Some problems our side!! try again later")
                 });
-            }else{
-                Toastify({
-                    text: "Oops!! You missed something there!",
-                    className: "info",
-                    style: {
-                        background:
-                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
-                        fontFamily: "Antic",
-                    },
-                }).showToast();
-            }
+
         })
 
     </script>
