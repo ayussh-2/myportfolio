@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var moveToTopButton = $("#moveToTop");
 
-    // Show/hide the button based on scroll position
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             moveToTopButton.css("opacity", "1").css("pointer-events", "auto");
@@ -9,7 +8,7 @@ $(document).ready(function () {
             moveToTopButton.css("opacity", "0").css("pointer-events", "none");
         }
     });
-    // Scroll to the top when the button is clicked
+
     $("#arrowToTop").click(function () {
         $("html, body").animate({ scrollTop: 0 }, 500);
     });
@@ -164,7 +163,6 @@ function submitForm() {
         });
     }
 }
-
 function runTestimonial(user) {
     var id = "#test" + user;
     var names = [

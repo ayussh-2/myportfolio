@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Ayush's Portfolio</title>
     <link rel = "icon" href="./img/titleLogo.png" type = "image/x-icon"> 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style2.css">
@@ -16,7 +16,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="scrollbar-thin scroll-smooth scrollbar-thumb-darkBG dark:scrollbar-thumb-darkWhite dark:bg-darkBG dark:text-darkWhite">
-
+    <!-- <div id="loader-container" style="height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div id="loader" style="display: flex; align-items: center; justify-content: center; position: absolute; z-index: 50;">
+            <span class="loader"></span>
+        </div>
+    </div> -->
+    
+    
     <div id="home"></div>
     <div id="menus" class="md:mt-10 z-50 dark:bg-darkBG" >
         <div id="hamburger" class="text-center scale-150 md:hidden py-10">
@@ -69,7 +75,7 @@
                     <div class="md:space-x-5 mt-10">
                         <button class="bg-black p-3 px-10 mt-5  text-white font-bold italic text-base rounded-md scale-90 dark:bg-darkWhite dark:text-darkBG" id="btn" onclick="downloadResume()">Resume</button>
                         <button class="bg-black p-3 px-10 mt-5  text-white font-bold italic text-base rounded-md scale-90  dark:bg-darkWhite dark:text-darkBG" id="btn" name="contactRefer">
-                            Contact Me</a>
+                            Contact Me
                         </button>
                     </div>
                 </div> 
@@ -153,7 +159,7 @@
                 </div>
             </div>
             <div id="explore" style="font-family: Julius;" data-aos="fade-right">
-                <a href="" style="box-shadow: 0px 0px;" data-aos="fade">EXPLORE MORE <i class="fa-solid fa-chevron-right" style="color: #000000;" id="arrow"></i></a>
+                <a href="" style="box-shadow: 0px 0px;" data-aos="fade">EXPLORE MORE <i class="fa-solid fa-chevron-right text-black dark:text-darkWhite" id="arrow"></i></a>
             </div>
         </div>
     </div>
@@ -316,29 +322,28 @@
         <section id="Portfolio">
             <div class="px-10 md:p-20 md:flex md:space-x-80">
                 <div class="flex flex-col md:mt-48">
-                    <div class="text-2xl">
-                        Beyond the <span style="font-family: FiraCode;">lines of <span class="font-bold" data-aos="fade" data-aos-duration="500">code</span>,I'm a<span style="font-family: amster;" data-aos="fade" data-aos-duration="700"> visual storyteller </span>painting <span class="font-bold italic" data-aos="fade" data-aos-duration="900"> moments</span> along my <span style="font-family: bright;" data-aos="fade" data-aos-duration="1100"> Camera.</span>
-                    </div>
-                    <div id="explore" class="mt-20 md:mt-4 mb-20" style="font-family: Julius;" data-aos="fade-right">
-                        <a href="" style="box-shadow: 0px 0px;">EXPLORE MORE <i class="fa-solid fa-chevron-right text-black dark:text-darkWhite" id="arrow"></i></a>
-                    </div>
+                   <div class="text-2xl">
+                      Beyond the <span style="font-family: FiraCode;">lines of <span class="font-bold" data-aos="fade" data-aos-duration="500">code</span>,I'm a<span style="font-family: amster;" data-aos="fade" data-aos-duration="700"> visual storyteller </span>painting <span class="font-bold italic" data-aos="fade" data-aos-duration="900"> moments</span> along my <span style="font-family: bright;" data-aos="fade" data-aos-duration="1100"> Camera.</span>
+                   </div>
+                   <div id="explore" class="mt-20 md:mt-4 mb-20" style="font-family: Julius;" data-aos="fade-right">
+                      <a href="" style="box-shadow: 0px 0px;">EXPLORE MORE <i class="fa-solid fa-chevron-right text-black dark:text-darkWhite" id="arrow"></i></a>
+                   </div>
                 </div>
                 <div class="grid md:grid-cols-2" data-aos="fade-up">
-                    <div id="imgContainer" class=" overflow-hidden">
-                        <img src="https://images.pexels.com/photos/6956800/pexels-photo-6956800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox  alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
-                    </div>
-                    <div id="imgContainer" class=" overflow-hidden">
-                        <img src="https://images.pexels.com/photos/5083711/pexels-photo-5083711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
-                    </div>
-                    <div id="imgContainer" class=" overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3230516/pexels-photo-3230516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
-                    </div>
-                    <div id="imgContainer" class=" overflow-hidden">
-                        <img src="https://images.pexels.com/photos/8113850/pexels-photo-8113850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
-                    </div>
-                    
+                   <div id="imgContainer" class=" overflow-hidden">
+                      <img src="https://images.pexels.com/photos/6956800/pexels-photo-6956800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox  alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
+                   </div>
+                   <div id="imgContainer" class=" overflow-hidden">
+                      <img src="https://images.pexels.com/photos/5083711/pexels-photo-5083711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
+                   </div>
+                   <div id="imgContainer" class=" overflow-hidden">
+                      <img src="https://images.pexels.com/photos/3230516/pexels-photo-3230516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
+                   </div>
+                   <div id="imgContainer" class=" overflow-hidden">
+                      <img src="https://images.pexels.com/photos/8113850/pexels-photo-8113850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-fancybox alt="img1" id="imgGal" class="cursor-pointer hover:scale-125 duration-300 dark:brightness-75">
+                   </div>
                 </div>
-            </div>
+             </div>
         </section>
     </div>
 
@@ -368,15 +373,16 @@
     </div>
     
     <div id="contact" class="p-20">
-        <section id="Contact">
+        <section id="Contact" >
             <div class="md:flex">
                 <div class="md:w-1/2 text-3xl">
                     <span>Let's <span class="font-bold italic" data-aos="fade">Connect!</span></span>
                     <img src="https://images.pexels.com/photos/5467596/pexels-photo-5467596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hero" class="scale-75 dark:brightness-75">
                 </div>
-                <div class="grid justify-items-center md:w-1/2 md:mt-16">
+                <div class="grid justify-items-center md:w-1/2 md:mt-16" >
                     <div class="grid md:grid-cols-2 md:ml-12 md:mt-32">
-                        <input type="text" id="naam" placeholder="Tell us your name!" class="p-3 m-2 h-16  border-2 border-black rounded dark:bg-darkBG dark:text-darkWhite dark:border-darkComment" data-aos="zoom-in-left">
+                        
+                        <input type="text" id="naam" placeholder="Tell us your name!" pattern="[A-Za-z]+" class="p-3 m-2 h-16  border-2 border-black rounded dark:bg-darkBG dark:text-darkWhite dark:border-darkComment" data-aos="zoom-in-left">
                         <input type="email" placeholder="Email" class="p-3 m-2 h-16  border-2 border-black rounded dark:bg-darkBG dark:text-darkWhite dark:border-darkComment" data-aos="zoom-in-left" id="email">
                         <input type="number" placeholder="Phone" class="p-3 m-2 h-16  border-2 border-black rounded dark:bg-darkBG dark:text-darkWhite dark:border-darkComment" data-aos="zoom-in-left" id="phone">
                         <select class="p-3 m-2 h-16  border-2 border-black rounded dark:bg-darkBG dark:text-darkWhite dark:border-darkComment" data-aos="zoom-in-left" id="purpose">
@@ -386,7 +392,8 @@
                         </select>
                         <textarea class="border-black m-2 h-16 border-2 p-3 rounded col-span-full dark:bg-darkBG dark:text-darkWhite dark:border-darkComment" data-aos="zoom-in-left" placeholder="Any special requests?" id="details"></textarea>
                     </div>
-                    <button class="bg-darkBG p-3 px-10 mt-10 h-16 text-darkWhite font-bold italic text-lg hover:bg-darkWhite dark:bg-darkWhite dark:text-darkBG" id="btn" onclick="submitForm()">SUBMIT</button>
+                    <button class="bg-darkBG p-3 px-10 mt-10 h-16 text-darkWhite font-bold italic text-lg hover:bg-darkWhite dark:bg-darkWhite dark:text-darkBG btn" id="submitForm" type="submit">SUBMIT</button>
+                
                 </div>
             </div>
         </section>
@@ -411,11 +418,10 @@
         </div>
         <hr>
         <div class="text-center mt-5" id="footerPara">
-            Made with ❤️ by <span class="italic">Ayush</span>
+            Crafted with <i class="fa-regular fa-heart fa-solid"></i> by Ayush
         </div>
 
     </div>
-
 
     <!-- scripts -->
     <script src="aos-master/dist/aos.js"></script>
@@ -425,8 +431,82 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, doc,collection,addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyAofgOPFov1tFZx2mu0-as6Uj7PyXHTAT0",
+            authDomain: "portfolio-1b0ca.firebaseapp.com",
+            databaseURL: "https://portfolio-1b0ca-default-rtdb.firebaseio.com",
+            projectId: "portfolio-1b0ca",
+            storageBucket: "portfolio-1b0ca.appspot.com",
+            messagingSenderId: "239399104832",
+            appId: "1:239399104832:web:4ccbe1cbb6dd5db6940aa5",
+            measurementId: "G-B82K68DR7E",
+        };
+    
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const btn = document.getElementById("submitForm");
+        btn.addEventListener("click",(e)=>{
+            
+            let name = document.getElementById("naam").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let purpose = document.getElementById("purpose").value;
+            let query = document.getElementById("details").value;
+    
+            if(name!=="" || email !=="" || phone !=="" || purpose!=="" || query!==""){
+                const userRef = collection(db, "Connect");
+                addDoc(userRef, {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    purpose: purpose,
+                    query: query,
+                })
+                .then(() => {
+                    Toastify({
+                    text: "We will get in touch asap!!",
+                    className: "info",
+                    style: {
+                        background:
+                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
+                        fontFamily: "Antic",
+                    },
+                }).showToast();
+                })
+                .catch((error) => {
+                    console.error("Error writing document: ", error);
+                    Toastify({
+                    text: "Some problems our side!! try again later",
+                    className: "error",
+                    style: {
+                        background:
+                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
+                        fontFamily: "Antic",
+                    },
+                }).showToast();
+                });
+            }else{
+                Toastify({
+                    text: "Oops!! You missed something there!",
+                    className: "info",
+                    style: {
+                        background:
+                            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,0.4375) 100%)",
+                        fontFamily: "Antic",
+                    },
+                }).showToast();
+            }
+        })
+
+    </script>
 
     <script src="script.js"></script>
+    
     <script>
         var typed = new Typed('#element', {
           strings: ['Visual Designer', 'Photographer','Web Developer'],
@@ -434,5 +514,6 @@
         });
         Fancybox.bind("[data-fancybox]", {});
     </script>
+    
 </body>
 </html>
